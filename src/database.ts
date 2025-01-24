@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs"; // Changed from 'bcrypt' to 'bcryptjs'
 
 const mongoUri = process.env.MONGODB_URI as string;
 const dbName = process.env.MONGO_DBNAME || "discord_bot";
