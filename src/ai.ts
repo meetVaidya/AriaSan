@@ -2,10 +2,12 @@ import OpenAI from "openai";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 import { botPrompt } from "./prompt";
 
+const apiKey = process.env.OPENAI_API_KEY;
+
 // Initialize OpenAI client
 const openai = new OpenAI({
     baseURL: "https://api.groq.com/openai/v1",
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: apiKey,
 });
 
 // System message to set the AI's personality and behavior
